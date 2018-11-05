@@ -40,6 +40,13 @@ module.exports.bootstrap = async function (done) {
     { "name": "Kenny Cheng", "age": "22", "id": 637 }
     // etc.
   ]);
+
+  await User.createEach([
+    { "username": "admin", "password": "123456" },
+    { "username": "boss", "password": "123456" }
+    // etc.
+]);
+
   return done();
 
 };
